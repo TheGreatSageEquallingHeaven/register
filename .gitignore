@@ -1,0 +1,16 @@
+.idea
+*.iml
+*.iws
+*.ipr
+
+.log
+
+.mvn
+target
+
+/**/.idea
+/**/.iml
+/**/.iws
+/**/.log
+/**/.mvn
+/**/target

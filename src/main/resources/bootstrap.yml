@@ -1,0 +1,25 @@
+server:
+    port: 8761
+
+spring:
+  application:
+    name: registry
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否需要注册到注册中心
+    registerWithEureka: false
+    #是否需要从注册中心获取服务列表
+    fetchRegistry: false
+    service-url.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    #是否关闭Eureka自我保护模式——————上生产时切记改成true，启动自我保护机制
+    enable-self-preservation: false
+
+logging:
+  level:
+    com.netflix.eureka: WARN
+    com.netflix.discovery: WARN
+  file: .log/registry.log
